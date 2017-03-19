@@ -28,6 +28,7 @@ server.listen(port, function(){
 })
 
 
+// where all the 'magic' happens...
 function readWriteServer(req, res, filepath, encoding, urlArray) {
     // set the petIndex to what is present in the urlArray at position '2'
     let petIndex = urlArray[2]
