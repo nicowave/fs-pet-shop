@@ -27,8 +27,7 @@ server.listen(port, function(){
   console.log('listening on port', port)
 })
 
-
-// where all the 'magic' happens...
+// function handles different HTTP requests and responses
 function readWriteServer(req, res, filepath, encoding, urlArray) {
     // set the petIndex to what is present in the urlArray at position '2'
     let petIndex = urlArray[2]
