@@ -26,12 +26,14 @@ app.get('/pets', function(req, res, next) {
    })
 })
 
+
 app.get('/pets/1', function(req, res, next) {
    fs.readFile(filepath, 'utf8', function (err, data){
       if (err) throw err;
       res.send(JSON.parse(data)[1])
    })
 })
+
 
 app.get('/pets/:index', function(req, res) {
 
@@ -43,6 +45,7 @@ app.get('/pets/:index', function(req, res) {
        res.send(data[index]);
      })
 })
+
 
 app.post('/pets', function(req, res, next){
    var pet = req.body
@@ -60,6 +63,7 @@ app.post('/pets', function(req, res, next){
       res.send(pet)
    }
 })
+
 
 app.patch('/pets/1', function(req, res, next){
    let pet = req.body
