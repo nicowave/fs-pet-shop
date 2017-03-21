@@ -116,8 +116,8 @@ app.patch('/pets/:id', function(req, res) {
     fs.readFile(filepath, 'utf8', function(err, petJson) {
       // handle any errors in reading 'pets.json'
       if (err) {
-        console.error(err.stack);
-        return res.sendStatus(500);
+        console.error(err.stack)
+        return res.sendStatus(500)
       }
       // parse object so it can be manipulated
       let pets = JSON.parse(petJson)
@@ -154,8 +154,8 @@ app.delete('/pets/:id', function(req, res) {
   fs.readFile(filepath, 'utf8', function(err, petJson) {
     // handle any errors in reading 'pets.json'
     if (err) {
-      console.error(err.stack);
-      return res.sendStatus(500);
+      console.error(err.stack)
+      return res.sendStatus(500)
     }
     // parse object so it can be manipulated
     let pets = JSON.parse(petJson)
